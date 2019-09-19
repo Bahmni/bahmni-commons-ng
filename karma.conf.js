@@ -1,6 +1,4 @@
 const webpackConfig = require('./webpack.config.js');
-webpackConfig.devtool = 'inline-source-map';
-webpackConfig.mode = 'development'
 
 module.exports = (config) => {
     config.set({
@@ -36,10 +34,6 @@ module.exports = (config) => {
             {pattern: 'test/**/*spec.js', watched: false},
         ],
         reporters: ['junit', 'progress'],
-
-        preprocessors: {
-            'src/**/*.js': ['webpack', 'sourcemap'],
-        },
 
         webpack: webpackConfig,
         webpackMiddleware: {
