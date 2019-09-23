@@ -4,7 +4,7 @@ module.exports = (config) => {
     config.set({
         basePath: '',
         frameworks: ['jasmine'],
-        browsers: ['Firefox'],
+        browsers: ['jsdom'],
         browserNoActivityTimeout: 100000,
         autoWatch: false,
         singleRun: true,
