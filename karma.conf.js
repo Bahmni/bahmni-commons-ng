@@ -9,7 +9,6 @@ module.exports = (config) => {
         autoWatch: false,
         singleRun: true,
         files: [
-
             {pattern: 'node_modules/angular/angular.js', watched: false},
             {pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false},
             {pattern: 'node_modules/moment/min/moment.min.js', watched: false},
@@ -33,8 +32,17 @@ module.exports = (config) => {
             {pattern: 'dist/bahmni-patient-commons.js', watched: false},
             {pattern: 'test/**/*spec.js', watched: false},
         ],
-        reporters: ['junit', 'progress'],
-
+        reporters: ['junit', 'progress', 'coverage'],
+        preprocessors: {
+            'dist/**/*.js': ['webpack', 'coverage'],
+        },
+        coverageReporter: {
+            reporters: [
+                {type: 'json', dir: 'coverage/'},
+                {type: 'html', dir: 'coverage/'},
+                {type: 'text-summary'}
+            ]
+        },
         webpack: webpackConfig,
         webpackMiddleware: {
             stats: 'errors-only',
