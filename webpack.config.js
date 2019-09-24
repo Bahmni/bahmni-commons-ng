@@ -5,6 +5,7 @@ module.exports = {
         "bahmni-util-commons": path.join(__dirname, 'src', 'bahmni-util-commons/init.js'),
         "bahmni-model-commons": path.join(__dirname, 'src', 'bahmni-model-commons/init.js'),
         "bahmni-auth-commons": path.join(__dirname, 'src', 'bahmni-auth-commons/init.js'),
+        "bahmni-domain-commons": path.join(__dirname, 'src', 'bahmni-domain-commons/init.js'),
         "bahmni-appframework-commons": path.join(__dirname, 'src', 'bahmni-appframework-commons/init.js'),
         "bahmni-displaycontrols-commons": path.join(__dirname, 'src', 'bahmni-displaycontrols-commons/init.js'),
         "bahmni-config-commons": path.join(__dirname, 'src', 'bahmni-config-commons/init.js'),
