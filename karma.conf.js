@@ -36,6 +36,7 @@ module.exports = (config) => {
             {pattern: 'dist/bahmni-patient-commons.js', watched: false},
             {pattern: 'dist/bahmni-uihelper-commons.js', watched: false},
             {pattern: 'dist/bahmni-i18n-commons.js', watched: false},
+            {pattern: 'dist/bahmni-logging-commons.js', watched: false},
             {pattern: 'test/**/*spec.js', watched: false},
         ],
         reporters: ['junit', 'progress', 'coverage'],

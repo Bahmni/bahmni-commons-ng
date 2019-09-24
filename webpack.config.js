@@ -12,6 +12,7 @@ module.exports = {
         "bahmni-uihelper-commons": path.join(__dirname, 'src', 'bahmni-uihelper-commons/init.js'),
         "bahmni-patient-commons": path.join(__dirname, 'src', 'bahmni-patient-commons/init.js'),
         "bahmni-i18n-commons": path.join(__dirname, 'src', 'bahmni-i18n-commons/init.js'),
+        "bahmni-logging-commons": path.join(__dirname, 'src', 'bahmni-logging-commons/init.js'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
