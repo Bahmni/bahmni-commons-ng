@@ -41,7 +41,7 @@ module.exports = (config) => {
         ],
         reporters: ['junit', 'progress', 'coverage'],
         preprocessors: {
-            'dist/**/*.js': ['webpack', 'coverage'],
+            'dist/**/*.js': ['coverage'],
         },
         coverageReporter: {
             reporters: [
