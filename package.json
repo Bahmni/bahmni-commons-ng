@@ -4,7 +4,7 @@
   "description": "Common Modules carved out from bahmniapps.",
   "scripts": {
     "bundle": "webpack --progress --colors",
-    "test": "npm run bundle && karma start"
+    "test": "yarn run bundle && karma start"
   },
   "author": "bahmni@thoughtworks.com",
   "license": "MPLv2",
@@ -39,5 +39,10 @@
     "zeroclipboard": "~2.1.0",
     "angular-translate": "2.7.2",
     "offline": "github:HubSpot/offline#v0.7.14"
+  },
+  "resolutions": { 
+    "**/**/lodash": "^4.17.12",
+    "**/**/xmlhttprequest-ssl": "^1.6.1",
+    "**/**/handlebars": "^4.7.7"
   }
 }
