@@ -31,7 +31,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "angular": "1.4.9",
+    "angular": "1.8.3",
     "moment": "2.18.1",
     "jquery": "1.9.1",
     "@uirouter/angularjs": "0.2.18",
