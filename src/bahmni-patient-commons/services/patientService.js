@@ -41,6 +41,22 @@ angular.module('bahmni.common.patient')
             });
         };
 
+        this.luceneSearch = function (query, offset, identifier) {
+            offset = offset || 0;
+            identifier = identifier || query;
+            return $http.get(Bahmni.Common.Constants.bahmniSearchUrl + "/patient/lucene", {
+                method: "GET",
+                params: {
+                    q: query,
+                    startIndex: offset,
+                    identifier: identifier,
+                    loginLocationUuid: sessionService.getLoginLocationUuid(),
+                    filterOnAllIdentifiers: true
+                },
+                withCredentials: true
+            });
+        };
+
         this.getPatientContext = function (patientUuid, programUuid, personAttributes, programAttributes, patientIdentifiers) {
             return $http.get('/openmrs/ws/rest/v1/bahmnicore/patientcontext', {
                 params: {
