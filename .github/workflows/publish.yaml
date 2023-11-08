@@ -16,6 +16,8 @@ jobs:
          node-version: v14.17.0
       - name: Install dependencies
         run: npm install
+      - name: Run test command
+        run: npm run test  
       - name: Run bundle commands
         run: npm run bundle
       - name: Publish
