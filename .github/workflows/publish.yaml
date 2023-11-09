@@ -4,7 +4,6 @@ on:
     push:
       tags:
         - '*'
-    workflow_dispatch:
 jobs:
   Publish:
     runs-on: ubuntu-latest
@@ -21,8 +20,10 @@ jobs:
       - name: Run bundle commands
         run: npm run bundle
       - name: Publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: startsWith(github.ref, 'refs/tags/')
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           npm publish --new-version $(jq -r ".version" package.json)
+        env:
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            always-auth: true
